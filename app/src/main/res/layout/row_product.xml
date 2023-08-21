@@ -8,23 +8,29 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glLeft"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="@dimen/dp0"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.50" />
 
     <ImageView
+        android:id="@+id/ivImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
         app:layout_constraintEnd_toEndOf="@+id/glLeft"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
-        android:layout_margin="64dp"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/glLeft"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,9 +38,11 @@
 
     <TextView
         android:id="@+id/tvDescription"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
-        android:layout_margin="64dp"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/glLeft"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"

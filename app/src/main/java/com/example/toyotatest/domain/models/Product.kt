@@ -1,24 +1,19 @@
 package com.example.toyotatest.domain.models
 
+import com.example.toyotatest.common.EMPTY_STRING
+import com.example.toyotatest.common.VALUE_ZERO
+import com.example.toyotatest.common.VALUE_ZERO_DOUBLE
 
-data class Product (
-    var id: Int = 0,
-    var title: String? = null,
-    var description: String? = null,
-    var price: Int = 0,
-    var discountPercentage: Double = 0.0,
-    var rating: Double = 0.0,
-    var stock: Int = 0,
-    var brand: String? = null,
-    var category: String? = null,
-    var thumbnail: String? = null,
-    var images: ArrayList<String>? = null
+data class Product(
+    var id: Int = VALUE_ZERO,
+    var title: String = EMPTY_STRING,
+    var description: String = EMPTY_STRING,
+    var price: Int = VALUE_ZERO,
+    var discountPercentage: Double = VALUE_ZERO_DOUBLE,
+    var rating: Double = VALUE_ZERO_DOUBLE,
+    var stock: Int = VALUE_ZERO,
+    var brand: String = EMPTY_STRING,
+    var category: String = EMPTY_STRING,
+    var thumbnail: String = EMPTY_STRING,
+    var images: List<String> = emptyList()
 )
-
-data class Root (
-    var products: List<Product> = emptyList(),
-    var total: Int = 0,
-    var skip: Int = 0,
-    var limit: Int = 0,
-)
-

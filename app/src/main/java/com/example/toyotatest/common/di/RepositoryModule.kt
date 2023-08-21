@@ -1,8 +1,7 @@
 package com.example.toyotatest.common.di
 
-import com.example.toyotatest.domain.IProductDataSource
-import com.example.toyotatest.domain.ProductRepository
-import dagger.Binds
+import com.example.toyotatest.domain.datasource.IProductDataSource
+import com.example.toyotatest.domain.repository.ProductRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

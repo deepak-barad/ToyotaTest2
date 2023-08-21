@@ -3,6 +3,7 @@ package com.example.toyotatest.presentation.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.toyotatest.common.VALUE_ONE
 import com.example.toyotatest.databinding.RowProductBinding
 import com.example.toyotatest.domain.models.Product
 import com.example.toyotatest.presentation.adapters.viewholders.ProductViewHolder
@@ -13,7 +14,7 @@ class ProductsRecyclerViewAdapter : RecyclerView.Adapter<ProductViewHolder>() {
 
     fun addProduct(product: Product) {
         products.add(product)
-        notifyItemInserted(products.size - 1)
+        notifyItemInserted(products.size - VALUE_ONE)
     }
 
     fun clear() {

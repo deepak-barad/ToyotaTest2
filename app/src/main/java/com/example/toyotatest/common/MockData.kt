@@ -1,18 +1,6 @@
-package com.example.toyotatest.datasource.remotedatasource
+package com.example.toyotatest.common
 
-import com.example.toyotatest.domain.IProductDataSource
-import com.example.toyotatest.domain.models.Root
-import com.google.gson.GsonBuilder
-import javax.inject.Inject
-
-class ProductRemoteDataSource @Inject constructor(): IProductDataSource {
-    override fun getProductsData(): Root {
-        val gson = GsonBuilder().create()
-        return gson.fromJson(mockData, Root::class.java)
-    }
-}
-
-const val mockData = "{\n" +
+const val MOCK_DATA = "{\n" +
         "  \"products\": [\n" +
         "    {\n" +
         "      \"id\": 1,\n" +

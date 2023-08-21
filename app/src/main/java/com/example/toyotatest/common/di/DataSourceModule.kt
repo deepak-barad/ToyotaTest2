@@ -1,7 +1,7 @@
 package com.example.toyotatest.common.di
 
-import com.example.toyotatest.datasource.remotedatasource.ProductRemoteDataSource
-import com.example.toyotatest.domain.IProductDataSource
+import com.example.toyotatest.data.remotedatasource.ProductRemoteDataSource
+import com.example.toyotatest.domain.datasource.IProductDataSource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
