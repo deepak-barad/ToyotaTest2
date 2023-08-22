@@ -7,7 +7,7 @@ import retrofit2.http.Headers
 import retrofit2.http.QueryMap
 
 interface IProductCatalogueApi {
-    @GET("products")
+    @GET("/products")
     @Headers("Accept: application/json")
-    suspend fun getProductCatalogue(@QueryMap options: Map<String, String>): Response<Any?>
+    suspend fun getProductCatalogue(@QueryMap options: Map<String, String>): Response<ProductCatalogue>
 }

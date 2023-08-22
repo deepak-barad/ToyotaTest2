@@ -1,5 +1,6 @@
 package com.example.toyotatest.common.network
 
+import com.example.toyotatest.common.BASE_URL
 import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -10,16 +11,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitHelper {
 
-    private const val baseUrl = "https://dummyjson.com.mcas.ms"
     private val gson = GsonBuilder().setLenient().create()
     fun getInstance(): Retrofit {
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
         val okHttpClient = OkHttpClient.Builder()
-            .followRedirects(true)
             .addInterceptor(AppInterceptor())
             .addInterceptor(loggingInterceptor).build()
-        return Retrofit.Builder().baseUrl(baseUrl)
+        return Retrofit.Builder().baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
@@ -31,5 +30,4 @@ class AppInterceptor : Interceptor {
         println(chain.request().url)
         return chain.proceed(chain.request())
     }
-
 }
