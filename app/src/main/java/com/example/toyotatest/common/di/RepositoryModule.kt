@@ -1,17 +1,25 @@
 package com.example.toyotatest.common.di
 
-import com.example.toyotatest.domain.datasource.IProductDataSource
-import com.example.toyotatest.domain.repository.ProductRepository
+import com.example.toyotatest.data.repository.ProductRepository
+import com.example.toyotatest.data.repository.ProductRepositoryImpl
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 
+//@Module
+//@InstallIn(SingletonComponent::class)
+//object RepositoryModule {
+//
+//    @Provides
+//    fun provideProductRepository(dataSource: ProductRemoteDataSource): ProductRepository =
+//        ProductRepositoryImpl(dataSource)
+//}
+
 @Module
 @InstallIn(SingletonComponent::class)
-object RepositoryModule {
+abstract class RepositoryModule {
 
-    @Provides
-    fun provideProductRepository(dataSource: IProductDataSource): ProductRepository =
-        ProductRepository(dataSource)
+    @Binds
+    abstract fun bindProductRepository(productRepositoryImpl: ProductRepositoryImpl): ProductRepository
 }
