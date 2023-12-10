@@ -1,7 +1,7 @@
-package com.example.toyotatest.domain.datasource
+package com.example.toyotatest.data.datasource
 
 import com.example.toyotatest.domain.models.ProductCatalogue
 
-interface IProductDataSource {
+interface ProductRemoteDataSource {
     suspend fun getProductsData(): ProductCatalogue
 }

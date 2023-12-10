@@ -1,7 +1,7 @@
 package com.example.toyotatest.common.di
 
-import com.example.toyotatest.data.remotedatasource.ProductRemoteDataSource
-import com.example.toyotatest.domain.datasource.IProductDataSource
+import com.example.toyotatest.data.remotedatasource.ProductRemoteDataSourceImpl
+import com.example.toyotatest.data.datasource.ProductRemoteDataSource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -12,5 +12,5 @@ import dagger.hilt.components.SingletonComponent
 abstract class DataSourceModule {
 
     @Binds
-    abstract fun bindProductDataSource(remoteDataSource: ProductRemoteDataSource): IProductDataSource
+    abstract fun bindProductDataSource(remoteDataSource: ProductRemoteDataSourceImpl): ProductRemoteDataSource
 }
